@@ -14,19 +14,19 @@
     v-bind="$attrs"
   >
     <template slot="no-data">
-      <v-list-tile>
-        <v-list-tile-title>{{noResultsFoundMessage}}</v-list-tile-title>
-      </v-list-tile>
+      <v-list-item>
+        <v-list-item-title>{{ noResultsFoundMessage }}</v-list-item-title>
+      </v-list-item>
     </template>
 
     <template slot="item" slot-scope="{ item }">
-      <v-list-tile-avatar>
+      <v-list-item-avatar>
         <v-icon>place</v-icon>
-      </v-list-tile-avatar>
-      <v-list-tile-content>
-        <v-list-tile-title v-text="item.name"/>
-        <v-list-tile-sub-title v-text="item.address"/>
-      </v-list-tile-content>
+      </v-list-item-avatar>
+      <v-list-item-content>
+        <v-list-item-title v-text="item.name"/>
+        <v-list-item-subtitle v-text="item.address"/>
+      </v-list-item-content>
     </template>
   </v-autocomplete>
 </template>
